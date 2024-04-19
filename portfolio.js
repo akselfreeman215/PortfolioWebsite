@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const port = 5000;
+const port = 443;
 
 app.use(express.static(path.join(__dirname, 'Portfolio'), {extensions: ['html']}))
 
@@ -17,5 +17,5 @@ app.get('/', (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Main server is running at http://localhost:${port}`);
+  console.log(`Main server is running at https://aksel.dev`);
 });
