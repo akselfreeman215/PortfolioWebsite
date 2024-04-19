@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Aksel Freeman's portfolio. Includes experience, skills, and projects.">
+    <meta name="author" content="Aksel Freeman">
+    <title> Aksel Freeman | Full-Stack Developer</title>
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+	<link rel="stylesheet" href="assets/css/akselfreeman.css">
+</head>
+
+<canvas id="stars" width="300" height="300"></canvas>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h4 class="header-subtitle" >Hello, I'm</h4>
+                <h1 class="header-title">Aksel Freeman</h1>
+                <h6 class="header-mono" >A Full-Stack Developer</h6>
+                <a href="assets/AkselFreemanFullStackDeveloper.pdf" download="AkselFreemanFullStackDeveloper.pdf" class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Print Resume</a> 
+            </div>
+        </div>
+    </header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link">Resume</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav brand">
+                    <img src="assets/imgs/avatar.jpg" alt="" class="brand-img">
+                    <li class="brand-txt">
+                        <h5 class="brand-title">Aksel Freeman</h5>
+                        <div class="brand-subtitle">Full-Stack Developer</div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item last-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid bg-white">
+        <div id="about" class="row about-section">
+            <div class="col-lg-4 about-card">
+                <h3 class="font-weight-light">Who am I?</h3>
+                <span class="line mb-5"></span>
+                <h5 class="mb-3">I am a 23-year-old, self-driven, and strategic Full-Stack Developer.</h5>
+                <p class="mt-20">I have experience with front-end designing, network analysis, database management, computer architecture, and a multitude of programming languages. <br><br> In my down time, I enjoy playing soccer and chess, and taking my dog Rockee on walks around the park.</p>
+                <!-- <button class="btn btn-outline-danger"><i class="icon-down-circled2 "></i>Download My CV</button> -->
+            </div>
+            <div class="col-lg-4 about-card">
+                <h3 class="font-weight-light">Personal Info</h3>
+                <span class="line mb-5"></span>
+                <ul class="mt40 info list-unstyled">
+                    <li><span>Birthdate</span> : 11/23/2000</li>
+                    <li><span>Email</span> : akselfreeman215@gmail.com</li>
+                    <li><span>Phone</span> : +1 (214) 263-1666</li>
+                    <!-- ensure this is accurate -->
+                    <li><span>Github</span> : akselfreeman215</li>
+                    <!-- ensure this is accurate, possible links-->
+                    <li><span>LinkedIn</span> : akselfreeman215</li>
+                    <li><span>Location</span> :  Carrollton, TX</li>
+                </ul>
+
+                <!-- include linkedin and github links plus other stuff -->
+                <ul class="social-icons pt-3">
+                    <li class="social-item"><a class="social-link" href="#"><i class="ti-github" aria-hidden="true"></i></a></li>
+                </ul>  
+            </div>
+            <div class="col-lg-4 about-card">
+                <h3 class="font-weight-light">My Expertise</h3>
+                <span class="line mb-5"></span>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i class="ti-widget icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>Front-End</h6>
+                        <p class="subtitle"> HTML, CSS, JS</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i class="ti-paint-bucket icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>Back-End</h6>
+                        <p class="subtitle">Node.js, MySQL, REST API</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i class="ti-stats-up icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>Software Engineering</h6>
+                        <p class="subtitle">C/C++/C#, Java, Python</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Resume Section-->
+    <section class="section bg-white" id="resume">
+        <div class="container">
+            <h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                       <div class="card-header">
+                            <div class="mt-2">
+                                <h4>Experience</h4>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="title text-danger">Sep 2023 - Dec 2023</h6>
+                            <P>STEMCO - <span class="text-danger font-weight-bolder">Process Controls Engineer</span></P>
+                            <ul>
+                                <li>Developed multiple internal websites using HTML, CSS, Javascript, and Node.js.</li>
+                                <li>Created Python REST APIs when needed.</li>
+                                <li>Helped with creating MySQL servers on virtual machines.</li>
+                                <li>Created a FreePBX server to host VoIP that had email and fax capabilities.</li>
+                            </ul>
+                            <hr>
+                            <h6 class="title text-danger">Jan 2023 - May 2023</h6>
+                            <P>Lone Star Circuits - <span class="text-danger font-weight-bolder">Process Controls Engineer</span></P>
+                            <ul>
+                                <li>Lead developer for process controls.</li>
+                                <li>Used C/C++, .NET CORE, and Python scripts on Visual Basic to progam Texas Instrument microcontrollers.</li>
+                                <li>Worked closely with firmware developer to serialize microntrollers using C/C++.</li>
+                                <li>Integrated multplie coding languages (Python, Java, C/C++) on legacy systems to ensure production flow would continue.</li>
+                            </ul>
+                            <hr>
+                            <h6 class="title text-danger">May 2019 - March 2020</h6>
+                            <P>TGI Fridays Corp. - <span class="text-danger font-weight-bolder">Application Developer, Database Manager</span></P>
+                            <ul>
+                                <li>Managed a SQL database with the IT department.</li>
+                                <li>Created REST APIs on Microsoft Azure.</li>
+                                <li>Created small applications for quality-of-life improvement such as Python file sorting scripts and a scheduler made in Java.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                       <div class="card-header">
+                            <div class="mt-2">
+                                <h4>Education</h4>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="title text-danger">Aug 2019 - May 2023</h6>
+                            <P>LeTourneau University - <span class="text-danger font-weight-bolder">BS Computer Science</span></P>
+                            <p><span class="text-danger font-weight-bolder">3.78 GPA</span></p>
+                            <P class="subtitle">Particiapted in coding competitions and was a computer science tutor. Attended the computer science club. Heavy interest in full-stack engineering.</P>
+                            <P class="subtitle"><span class="text-danger font-weight-bolder">Relevant Courses:</span></P>
+                            <ul>
+                                <li>Data Structures</li>
+                                <li>Computer Architecture</li>
+                                <li>Networks & Data Communications</li>
+                                <li>Programming Languages</li>
+                                <li>Software Engineering</li>
+                                <li>Database Management</li>
+                                <li>Operating Systems</li>
+                                <li>Electric Circuits</li>
+                                <li>Analysis of Algorithms</li>
+                                <li>Digital Electronics</li>
+                                <li>Digital Forensics</li>
+                                <li>Automata Theory</li>
+                                <li>Compilers</li>
+                                <li>Information Systems</li>
+                                <li>Network Security</li>
+                            </ul>
+                            <hr>
+                            <h6 class="title text-danger">Aug 2015 - May 2019</h6>
+                            <P>RL Turner - <span class="text-danger font-weight-bolder">High School Degree</span></P>
+                            <P class="subtitle">Began my coding career. Took data analysis and computer science classes across all four years of school. Participated in coding competitions and coding club.</P>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                       <div class="card-header">
+                            <div class="pull-left">
+                                <h4 class="mt-2">Skills</h4>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body pb-2">
+                            <h6>Java</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 97%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                           <h6>HTML5 &amp; CSS3 &amp; JS</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>SQL</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>Node.js</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 82%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>C/C++/C#</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 72%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>Python</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 72%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>Microsoft Azure</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 66%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>PHP</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>Wireshark</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 58%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>Ruby</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 45%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>Windows</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 97%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>Linux/Unix</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section py-5">
+        <div class="container text-center">
+            <h2 class="text-light mb-5 font-weight-bolder">I Am Available For Freelancing Work!</h2>
+            <button class="btn bg-primary w-lg" id="contactBtn">Contact Me!</button>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <!-- projects section, get some projects done -->
+    <section class="section bg-white" id="portfolio">
+        <div class="container">
+            <h1 class="mb-5"><span class="text-danger">My</span> Projects</h1>
+            <div class="portfolio">
+                <div class="filters">
+                    <a href="#" data-filter=".all" class="active">
+                        All
+                    </a>
+                    <a href="#" data-filter=".frontend">
+                        Front-End
+                    </a>
+                    <a href="#" data-filter=".backend">
+                        Back-End
+                    </a>
+                    <a href="#" data-filter=".other">
+                        Other
+                    </a>
+                </div>
+                
+                <div class="portfolio-container"> 
+                    <div class="col-md-6 col-lg-6 frontend backend all">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/ecoflex.jpg" class="img-fluid" alt="EcoFlex">
+                            <a class="img-popup" href="https://ecoflexmfg.com/" target="_blank">
+                                <div class="content-holder">
+                                    <div class="text-holder">
+                                        <h6 class="title">EcoFlex MFG</h6>
+                                        <p class="subtitle">Client-designed website for selling IBC Totes. Made with HTML, CSS, and JS. Created emails for web server and has a backend with database support.</p>
+                                    </div>
+                                </div>   
+                            </a>
+                        </div>             
+                    </div>
+                    <div class="col-md-4 col-lg-6 frontend backend all">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/web-2.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <a class="img-popup" href="SteamSearch" target="_blank">
+                                <div class="content-holder">
+                                    <div class="text-holder">
+                                        <h6 class="title">Videogame Search</h6>
+                                        <p class="subtitle">Videogame search on Steam with more precise search options. Uses Steam's Web API to utilize data collection and labeling. Use a MySQL and Node.js backend and has a frontend GUI in HTML, CSS, and JS. </p>
+                                    </div>
+                                </div> 
+                            </a>
+                        </div>                         
+                    </div>
+                    <div class="col-md-6 col-lg-4 frontend all">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/advertising-2.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                         
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/advertising-2.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">ADVERSTISING</h6>
+                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                </div>
+                            </div>    
+                        </div>              
+                    </div> 
+                    <div class="col-md-6 col-lg-4 other">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/web-4.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/web-4.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">WEB</h6>
+                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                </div>
+                            </div>
+                        </div>                                                     
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 frontend"> 
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/advertising-1.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                               
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/advertising-1.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">ADVERSITING</h6>
+                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                </div>
+                            </div>
+                        </div>                                                       
+                    </div> 
+                    <div class="col-md-6 col-lg-4 other all">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/web-3.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">  
+                           <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/web-3.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">WEB</h6>
+                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                </div>
+                            </div>
+                        </div>                                                     
+                    </div>
+                    <div class="col-md-6 col-lg-4 frontend all">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/advertising-3.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">       
+                           <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/advertising-3.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">ADVERSITING</h6>
+                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                </div>
+                            </div>
+                        </div>                                                       
+                    </div> 
+                    <div class="col-md-6 col-lg-4 frontend all"> 
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/advertising-4.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">            
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/advertising-4.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">ADVERTISING</h6>
+                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                </div>
+                            </div>
+                        </div>
+                                
+                    </div> 
+                    <div class="col-md-6 col-lg-4 backend all">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/branding-1.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                        
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/branding-1.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">BRANDING</h6>
+                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div> 
+                    <div class="col-md-6 col-lg-4 backend">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/branding-2.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">  
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/branding-2.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">BRANDING</h6>
+                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                </div>
+                            </div>
+                        </div>                                                     
+                    </div> 
+                    <div class="col-md-6 col-lg-4 backend all">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/branding-3.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">   
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/branding-3.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">BRANDING</h6>
+                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                </div>
+                            </div>
+                        </div>                                                    
+                    </div> 
+                    <div class="col-md-6 col-lg-4 backend">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/branding-4.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                      
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/branding-4.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">BRANDING</h6>
+                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                </div>
+                            </div>
+                        </div>                                                      
+                    </div> 
+                    <div class="col-md-6 col-lg-4 backend">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/branding-5.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">          
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/branding-5.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">BRANDING</h6>
+                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                </div>
+                            </div>
+                        </div>                                                   
+                    </div>
+                </div> 
+            </div>  
+        </div>            
+    </section>
+
+    
+
+    <div class="section contact" id="contact">
+        <div id="footer" class="footer"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="contact-form-card">
+                        <h4 class="contact-title">Send a Message!</h4>
+                        <form action="">
+                            <div class="form-group">
+                                <input  class="form-control" type="text" placeholder="Name *" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="email" placeholder="Email *" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="" placeholder="Message *" rows="7" required></textarea>
+                            </div>
+                            <div class="form-group ">
+                                <button type="submit" class="form-control btn btn-primary" >Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-info-card">
+                        <h4 class="contact-title">Get in Touch!</h4>
+                        <div class="row mb-2">
+                            <div class="col-1 pt-1 mr-1">
+                                <i class="ti-mobile icon-md"></i>
+                            </div>
+                            <div class="col-10 ">
+                                <h6 class="d-inline">Phone : <br> <span class="text-muted">+1 (214) 263-1666</span></h6>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-1 pt-1 mr-1">
+                                <i class="ti-email icon-md"></i>
+                            </div>
+                            <div class="col-10">
+                                <h6 class="d-inline">Email :<br> <span class="text-muted">akselfreeman215@gmail.com</span></h6>
+                            </div>
+                        </div>
+                        <!-- fix contact icons, add linkedin and others -->
+                        <ul class="social-icons pt-4 fixed-bottom">
+                            <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-github" aria-hidden="true"></i></a></li>
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope  -->
+    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
+    
+    <!-- Dealaunay Background -->
+    <script src="assets/js/delaunay.min.js"></script>
+    <script src="assets/js/delaunay.js"></script>
+    <script src="assets/js/akselfreeman.js"></script>
+
+
+</body>
+</html>
