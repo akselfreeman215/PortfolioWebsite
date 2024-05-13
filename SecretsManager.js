@@ -29,13 +29,12 @@ const getSecret = async () => {
 
 const sendEmail = async (name, email, message) => {
     const secret = await getSecret();
-    const { loginemail, loginpassword } = secret;
 
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: loginemail,
-            pass: loginpassword
+            user: secret.GMAIL_USER,
+            pass: secret.GMAIL_PASS
         }
     });
 
