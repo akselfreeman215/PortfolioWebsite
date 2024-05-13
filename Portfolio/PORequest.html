@@ -1,0 +1,189 @@
+<!--
+--File: Purchasing.html
+--Project: PO Request Forms
+--Author: Aksel Freeman
+--Version: 1.0.0
+--Description: HTML file for purchasing page of PO Request Forms.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Purchasing</title>
+    <link rel="icon" href="assets/imgs/icons/Icon256.png" type="image/x-icon">
+    <link rel="icon" href="assets/imgs/icons/Icon128.png" type="image/x-icon">
+    <link rel="icon" href="assets/imgs/icons/Icon64.png" type="image/x-icon">
+    <link rel="icon" href="assets/imgs/icons/Icon32.png" type="image/x-icon">
+    <link rel="icon" href="assets/imgs/icons/Icon16.png" type="image/x-icon">
+    <link rel="icon" href="assets/imgs/icons/IconICO.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/porequest.css">
+</head>
+
+<body id="body">
+
+    <!--NAV BAR-->
+    <nav id="nav">
+        
+        <a id="logoLink" href="home">
+            <img id="logo" src="assets/imgs/icons/logo.png" alt="Logo">
+        </a>
+
+        <button id="clear-all" type="button" onclick="refreshPage()">Clear All</button>
+
+        <!--DARK/LIGHT MODE SWITCH-->
+        <div id="switch" class="switch" onclick="toggleSwitch()">
+            <div class="sun i">&#x263C;</div>
+            <div id="slider" class="slider"></div>
+            <div class="moon i">&#x263D;</div>
+        </div>
+
+
+        <!--HAMBURGER MENU-->
+        <!-- <ul>
+            <li class="dropdown">
+            <span id="hamburger" class="hamburger-icon" id="dropdown" onclick="toggleDropdown()">&#9776;</span>
+                <div id="dropdown-content" class="dropdown-content" >
+                  <a id="dropdown-text" href="#" target="">PO Request Form</a>
+                </div>
+            </li>
+        </ul> -->
+    </nav>
+
+    <!--PADDING FOR STYLE-->
+    <div class="padding-container"></div>
+
+    <!--FORM CONTAINER-->
+    <div id="form-container" class="form-container">
+        <h2>PO Request Form</h2>
+
+        <!-- TEST BUTTON -->
+        <br><br><button id="debugTest" type="submit" onclick="autofill()">AUTOFILL</button><br><br>
+
+        <form id="pdfForm" action="/upload" method="post" enctype="multipart/form-data">
+            <label for="date">Date:<div id="dateError" class="hidden" required>REQUIRED</div></label>
+            <input type="date" id="date" name="date" onclick="resetError(this)"><br><br>
+
+            <!-- PO NUMBER WILL BE AUTOMATICALLY DEFINED -->
+            <!-- <label for="purchaseOrder">Customer Order Number:</label>
+            <input type="text" id="purchaseOrder" name="purchaseOrder" placeholder="Enter PO# (optional)"><br><br> -->
+
+            <label for="department">Department Name:<div id="departmentError" class="hidden" required>REQUIRED</div></label>
+            <input readonly type="text" id="department" name="department" placeholder="Enter Department*" onclick="showDepartment(); resetError(this);" onblur="hideDepartment();" autocomplete="off">
+            <ul class="dropdown-list hidden" id="departmentDropdown" ></ul><br><br>
+
+            <div id= "department-pad" class="dropdown-padding hidden"></div>
+
+            <label for="userName">Requested By:<div id="userNameError" class="hidden" required>REQUIRED</div></label>
+            <input readonly type="text" id="userName" name="userName" placeholder="Employee User*" onclick="showEmployee(); resetError(this);" onblur="hideEmployee(); " autocomplete="off">
+            <ul class="employee-list hidden" id="employeeDropdown"></ul><br><br>
+            
+            <div id= "userName-pad" class="dropdown-padding hidden"></div>
+
+            <div id="manager-container" class="hidden">
+                <label for="manager">Manager:<div id="managerError" class="hidden">REQUIRED</div></label>
+                <input readonly type="text" id="manager" name="manager" placeholder="Manager*" onclick="showManager(); resetError(this);" onblur="hideManager();" autocomplete="off">
+                <ul class="manager-list hidden" id="managerDropdown"></ul><br><br>
+            </div>
+
+            <div id= "manager-pad" class="dropdown-padding hidden"></div>
+
+            <label for="supplierName">Supplier's Name:</label>
+            <input type="text" id="supplierName" name="supplierName" placeholder="Enter Source or Supplier (optional)"><br><br>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="5" cols="50" placeholder="Enter Description (MAX 250 CHARACTERS)"></textarea>
+            <div id="charCount">Character count: 0</div>
+            <div id="charCountWarning" class="hidden">Maximum number of characters exceeded! (250)</div><br><br><br>
+            
+            <!--BUTTON FOR ADDING/REMOVING ROWS-->
+            <button id="add-row" type="button" onclick="addRow()">Add Row</button>
+            <button id="remove-row" type="button" onclick="removeRow()">Remove Row</button>
+
+            <!--ERROR MSG FOR TABLE-->
+            <div id="error-message" class="hidden"></div>
+            
+            <!--INPUT TABLE-->
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>QTY*</th>
+                        <th>Part#</th>
+                        <th>Desc*</th>
+                        <th>Unit Cost*</th>
+                        <th>Ext. Cost*</th>
+                        <th>Date Req*</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id='qty' contenteditable="true" onblur='updateTable(); checkInteger(this);' onkeydown="handleKeyPress(event)";></td>
+                        <td contenteditable="true" onkeydown="handleKeyPress(event)"></td>
+                        <td contenteditable="true" onblur='updateTable(); checkDesc(this); hideTableCount();' onkeydown="handleKeyPress(event)" oninput="updateCharacterCount(this)" onclick="showTableCount(this);"></td>
+                        <td id='cost' contenteditable="true" onblur='updateTable(); checkCost(this);' onkeydown="handleKeyPress(event)"></td>
+                        <td id="extcost"></td>
+                        <td contenteditable="true" type="date" onblur='updateTable(); checkDate(this);' onkeydown="handleKeyPress(event)"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- LIVE DESC UPDATE -->
+            <div id="characterCount" class="hidden">Selected Description Character Count: 0</div>
+            <div id="tableCharCountWarning" class="hidden">Maximum number of characters exceeded! (80)</div>
+
+            <!-- ERRORS IN TABLE -->
+            <div id="missing-data-error" class="hidden">PLEASE FILL IN MISSING DATA</div>
+            <ul id="table-error">
+                <li id="qty-error" class="hidden"></li>
+                <li id="cost-error" class="hidden"></li>
+                <li id="date-error" class="hidden"></li>
+                <li id="desc-error" class="hidden"></li>
+            </ul><br><br>
+
+            <!--LINK INPUTS-->
+            <label for="links">Links:</label>
+            <input type="text" id="link1" name="link1" placeholder="(optional)">
+            <input type="text" id="link2" name="link2" placeholder="(optional)">
+            <input type="text" id="link3" name="link3" placeholder="(optional)"><br><br>
+
+
+            <!--DROP-ZONE-->
+            <div id="drop-zone" onclick="triggerFileInput()" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                  Click or Drag a File Here
+                </form>
+              </div>
+            
+            <!--FILE LIST-->
+            <div id="file-list">
+                <ul id="files"></ul>
+            </div><br><br>
+
+            <!--CHECKBOX-->
+            <label id="checkboxContainer" for="checkbox">
+                <input id="checkbox" type="checkbox" value="test">
+                <div class="checkboxLabel">
+                    OPT IN to receive email after your PO Request has been approved or denied.
+                </div>
+            </label><br><br>
+              
+
+            <!--SUBMIT BUTTON-->
+            <button id="submit" type="submit">SUBMIT</button>
+            <br><br>
+            <!--PDF BUTTON-->
+            <button id="viewpdf" onclick="window.open('assets/js/DATA/GENERATED_POR.pdf', '_blank')">VIEW PDF</button>
+
+        
+        </form>
+    </div>
+
+    <!--PADDING FOR STYLE-->
+    <div class="padding-container"></div>
+
+    <!--SCRIPTS-->
+    <script src="assets/js/jspdf.umd.min.js"></script>
+    <script src="assets/js/porequest.js"></script>
+</body>
+</html>

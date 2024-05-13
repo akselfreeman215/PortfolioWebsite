@@ -1,4 +1,4 @@
-
+//navbar
 $(document).ready(function(){
     $(".navbar .nav-link").on('click', function(event) {
 
@@ -17,6 +17,7 @@ $(document).ready(function(){
     });
 });
 
+//contact button
 document.addEventListener("DOMContentLoaded", function() {
   // Get the button element
   var contactBtn = document.getElementById("contactBtn");
@@ -52,6 +53,36 @@ $(window).on("load", function() {
     });
 });
 
+//phone view for projects
+function isMobileDevice() {
+  return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+}
+
+// Select all portfolio-item elements
+const portfolioItems = document.querySelectorAll('.portfolio .portfolio-container .portfolio-item');
+
+// Add a scroll event listener to the window
+window.addEventListener('scroll', () => {
+  // If the device is a mobile device
+  if (isMobileDevice()) {
+      // For each portfolio-item
+      portfolioItems.forEach(item => {
+          // Calculate the top and bottom boundaries of the portfolio-item
+          const rect = item.getBoundingClientRect();
+          const top = rect.top;
+          const bottom = rect.bottom;
+
+          // Check if the portfolio-item is in the viewport
+          if ((top <= window.innerHeight-350) && (bottom >= 250)) {
+              // Add the mobile-hover class to show the content-holder
+              item.classList.add('mobile-hover');
+          } else {
+              // Remove the mobile-hover class to hide the content-holder
+              item.classList.remove('mobile-hover');
+          }
+      });
+  }
+});
 
 //canvas animation
 // Settings

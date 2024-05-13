@@ -1,1 +1,1 @@
-NodeJs, HTML/CSS/JS, and sposibly other languages to represent my website portfolio.
+NodeJs, HTML/CSS/JS, and possibly other languages to represent my website portfolio.
