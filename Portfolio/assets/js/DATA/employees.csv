@@ -1,0 +1,8 @@
+,EMPL_CODE,EMPLOYEE_NAME,ABBR_NAME,EMPLOYEE_ID,EMPLOYEE_EMAIL
+1,E0001,Aksel Freeman,afreeman,E0001,afreeman@test.com
+2,E0002,Alayna Miranda,amiranda,E0002,amiranda@test.com
+3,E0003,Oscar Herrera,aherrera,E0003,aherrera@test.com
+4,E0004,Blaise Blomfield,bblomfield,E0004,bblomfield@test.com
+5,E0005,Josh Quezada,jquezada,E0005,jquezada@test.com
+6,E0006,Angel Pineda,apineda,E0006,apineda@test.com
+7,NONE,***OTHER***,other,NONE,
