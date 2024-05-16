@@ -45,5 +45,5 @@ app.use('/porequest', poreqRoutes);
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Main server is running at https://www.aksel.dev`);
+  console.log(`Main server is running at https://aksel.dev`);
 });
