@@ -8,7 +8,7 @@ const poreqRoutes = require('./poreq');
 const { getSecret, sendEmail } = require('./SecretsManager.js');
 
 const app = express();
-const port = 80;
+const port = 3000;
 
 // Middleware to parse the body of the request
 app.use(express.urlencoded({ extended: true }));
